@@ -6,7 +6,7 @@
         <size>1000M</size>
         <count>3</count>
     </logger>
-    <listen_host>0.0.0.0</listen_host>
+    <listen_host>103.127.132.33</listen_host>
     <keeper_server>
         <tcp_port>9181</tcp_port>
         <server_id>2</server_id>
@@ -20,7 +20,7 @@
         <raft_configuration>
             <server>
                 <id>1</id>
-                <hostname>clickhouse-keeper-01</hostname>
+                <hostname>103.176.79.206</hostname>
                 <port>9234</port>
                 <can_become_leader>true</can_become_leader>
                 <start_as_follower>true</start_as_follower>
@@ -28,19 +28,11 @@
             </server>
             <server>
                 <id>2</id>
-                <hostname>clickhouse-keeper-02</hostname>
+                <hostname>103.176.79.206</hostname>
                 <port>9234</port>
                 <can_become_leader>true</can_become_leader>
                 <start_as_follower>false</start_as_follower>
-                <priority>3</priority>
-            </server>
-            <server>
-                <id>3</id>
-                <hostname>clickhouse-keeper-03</hostname>
-                <port>9234</port>
-                <can_become_leader>true</can_become_leader>
-            <start_as_follower>true</start_as_follower>
-                <priority>2</priority> 
+                <priority>2</priority>
             </server>
         </raft_configuration>
     </keeper_server>

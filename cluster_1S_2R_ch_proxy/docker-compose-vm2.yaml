@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+  clickhouse-02:
+    image: "clickhouse/clickhouse-server:${CHVER:-latest}"
+    user: "101:101"
+    container_name: clickhouse-02
+    hostname: clickhouse-02
+    networks:
+      - cluster_1S_2R_ch_proxy
+    volumes:
+      - ${PWD}/fs/volumes/clickhouse-02/etc/clickhouse-server/config.d/config.xml:/etc/clickhouse-server/config.d/config.xml
+      - ${PWD}/fs/volumes/clickhouse-02/etc/clickhouse-server/config.d/ttl_log.xml:/etc/clickhouse-server/config.d/ttl_log.xml
+      - ${PWD}/fs/volumes/clickhouse-02/etc/clickhouse-server/users.d/users.xml:/etc/clickhouse-server/users.d/users.xml
+    ports:
+      - "8125:8123"
+      - "9002:9000"        
+networks:
+  cluster_1S_2R_ch_proxy:
+    driver: bridge

@@ -7,7 +7,7 @@
         <count>3</count>
     </logger>
     <display_name>cluster_1S_2R node 2</display_name>
-    <listen_host>0.0.0.0</listen_host>
+    <listen_host>103.127.132.33</listen_host>
     <http_port>8123</http_port>
     <tcp_port>9000</tcp_port>
     <user_directories>
@@ -26,11 +26,11 @@
             <shard>
                 <internal_replication>true</internal_replication>
                 <replica>
-                    <host>clickhouse-01</host>
+                    <host>103.176.79.206</host>
                     <port>9000</port>
                 </replica>
                 <replica>
-                    <host>clickhouse-02</host>
+                    <host>103.127.132.33</host>
                     <port>9000</port>
                 </replica>
             </shard>
@@ -38,15 +38,11 @@
     </remote_servers>
     <zookeeper>
         <node>
-            <host>clickhouse-keeper-01</host>
+            <host>103.176.79.206</host>
             <port>9181</port>
         </node>
         <node>
-            <host>clickhouse-keeper-02</host>
-            <port>9181</port>
-        </node>
-        <node>
-            <host>clickhouse-keeper-03</host>
+            <host>103.176.79.206</host>
             <port>9181</port>
         </node>
     </zookeeper>
