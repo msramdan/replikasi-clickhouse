@@ -9,19 +9,33 @@
         </default>
     </profiles>
     <users>
-        <default>
+        <!-- <default>
             <access_management>1</access_management>
             <profile>default</profile>
             <networks>
                 <ip>::/0</ip>
             </networks>
             <quota>default</quota>
-            <password>password123</password>
+            <password_sha256_hex>5E884898DA28047151D0E56F8DC6292773603D0D6AABBDD62A11EF721D1542D8</password_sha256_hex>
             <access_management>1</access_management>
             <named_collection_control>1</named_collection_control>
             <show_named_collections>1</show_named_collections>
             <show_named_collections_secrets>1</show_named_collections_secrets>
-        </default>
+        </default> -->
+        <admin>
+            <access_management>1</access_management>
+            <profile>default</profile>
+            <networks>
+                <ip>::/0</ip>
+            </networks>
+            <quota>default</quota>
+            <!-- sha256_hex from string "password" -->
+            <password_sha256_hex>58C74D9729258537D514F717F00E49727F7F2B1AD5FC3AC59F78047DA12D4D73</password_sha256_hex> 
+            <access_management>1</access_management>
+            <named_collection_control>1</named_collection_control>
+            <show_named_collections>1</show_named_collections>
+            <show_named_collections_secrets>1</show_named_collections_secrets>
+        </admin>
     </users>
     <quotas>
         <default>

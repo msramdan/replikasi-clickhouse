@@ -86,6 +86,8 @@ services:
       - "9080:80"
     volumes:
       - ${PWD}/fs/volumes/ch-proxy/config/config.yml:/opt/config.yml
+    env_file:
+      - .env
     depends_on:
       - clickhouse-01
       - clickhouse-02         
